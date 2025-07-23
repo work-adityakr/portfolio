@@ -1,4 +1,6 @@
 import React from "react";
+import AdityaImg from './Aditya.jpg';
+
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -80,9 +82,9 @@ export default function Portfolio() {
         </div>
 
         {/* Right side image */}
-        <div className="lg:w-1/2 w-full flex justify-center">
+        <div className="lg:w-1/2 w-full flex justify-center h-[500px]">
           <img
-            src=""
+            src={AdityaImg}
             alt="Portrait of a mature man with glasses and a serious expression looking slightly to the side, wearing a black shirt on a dark background"
             className="rounded-lg max-w-full h-auto shadow-lg"
             onError={(e) => {
@@ -106,7 +108,10 @@ export default function Portfolio() {
           <FaInstagram />
         </a>
         <a
-          href="#linkedin"
+          href="www.linkedin.com/in/
+          work-adityakr
+          Vanity URL name
+          "
           aria-label="LinkedIn"
           className="hover:text-[#ff4848] transition-colors duration-300"
           target="_blank"
