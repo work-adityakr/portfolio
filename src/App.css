@@ -1,0 +1,28 @@
+/* write your css here */
+
+/* Your custom CSS below */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+.font-handwritten {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+@media (max-width: 640px) {
+  .sm\:w-48 {
+    width: 100% !important;
+  }
+  .sm\:h-32 {
+    height: auto !important;
+  }
+  .md\:col-span-2,
+  .md\:col-span-3 {
+    grid-column: span 1 / span 1 !important;
+  }
+  .grid-cols-3 {
+    grid-template-columns: 1fr !important;
+  }
+  .gap-4 {
+    gap: 1rem;
+  }
+}
