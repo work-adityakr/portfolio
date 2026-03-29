@@ -1,22 +1,48 @@
-
-  
-
-import React from "react";
+import { PROJECTS } from "../assets/constants";
+import {motion} from "framer-motion"
+import { Link } from 'lucide-react';
 
 export default function Blog() {
   return (
-    <section id="blog" className="h-screen flex items-center justify-center">
-    <div className="text-white bg-[#0b0b0b] py-20 scroll-mt-24">
-    <h2 className="text-center text-5xl font-bold mb-10">Blog</h2>
-    <div className="px-6 max-w-5xl mx-auto">
-      <div className="bg-[#1a1a1a] p-6 rounded-xl mb-6 shadow-md">
-        <h3 className="text-xl font-semibold text-[#d72828]">How I Built My Portfolio</h3>
-        <p className="mt-2 text-gray-300">A deep dive into the technologies and strategies I used to create my personal website.</p>
-      </div>
-      <div className="bg-[#1a1a1a] p-6 rounded-xl shadow-md">
-        <h3 className="text-xl font-semibold text-[#d72828]">Tips for New Developers</h3>
-        <p className="mt-2 text-gray-300">Guidance for beginners starting their journey in full-stack development.</p>
-      </div>
+    <section id="blog" className="flex items-center justify-center">
+
+  <div className="pb-4 pt-20">
+    <motion.h2 
+    whileInView={{opacity:1,y:0}}
+    initial={{opacity:0,y:-100}}
+    transition={{duration:0.5}}
+    className="my-20 text-center font-bold text-4xl lg:text-5xl"> Projects</motion.h2>
+    <div>
+      {PROJECTS.map((project,index) => (
+        <div key={index} className="mb-8 gap-x-6 flex flex-wrap lg:justify-center">
+          <motion.div
+          whileInView={{opacity:1,x:0}}
+          initial={{opacity:0,x:-100}}
+          transition={{duration:1}}
+          className="w-full lg:w-1/4">
+            <img src={project.image}
+            width={250}
+            height={250}
+            alt={project.title}
+            className="mb-4 rounded"
+            />
+          </motion.div>
+          <motion.div 
+          whileInView={{opacity:1,x:0}}
+          initial={{opacity:0,x:-100}}
+          transition={{duration:1}}
+          className="w-full max-w-xl lg:w-3/4">
+          <h3 className="mb-2 font-semibold text-2xl flex">
+            <div>{project.title}</div><a target="_blank" rel="noopener noreferrer" href={project.link} className="pl-3" ><Link /></a></h3>
+          <p className="mb-4 text-stone-400">{project.description}</p>
+          {
+            project.technologies.map((tech,index) => (
+              <span className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300" key={index}>{tech}</span>
+            ))
+          }
+          </motion.div>
+        </div>
+      ))}
     </div>
   </div>
     </section>

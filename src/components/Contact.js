@@ -1,8 +1,13 @@
+import {motion} from "framer-motion"
 
 export default function Contact() {
     return (
-      <section className="max-h-screen flex items-center justify-center bg-black my-10" id="Contact">
-      <div className="text-white bg-[#0b0b0b] py-20 scroll-mt-24 mb-16 mt-24">
+      <section className="min-h-screen flex items-center justify-center my-10" id="Contact">
+      <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1.5 }}
+      className="text-white py-20 scroll-mt-24 mb-16 mt-24 rounded-2xl pt-80">
       <h2 className="text-center text-7xl font-bold mb-10">Contact Me</h2>
       <form className="max-w-2xl mx-auto px-6">
         <input
@@ -27,7 +32,7 @@ export default function Contact() {
           Send Message
         </button>
       </form>
-    </div>
+    </motion.div>
       </section>
     );
   }
