@@ -11,11 +11,11 @@ export default function Navbar() {
 
   const navLinks = [
     { to: "home", label: "Home", offset: -80 },
-    { to: "about", label: "Technology", offset: -20 },
-    { to: "services", label: "Services", offset: -10 },
-    { to: "experience", label: "Experience", offset: 41 },
-    { to: "blog", label: "Projects", offset: 50 },
-    { to: "Contact", label: "Contact", offset: 50 },
+    { to: "about", label: "Technology", offset: -80 },
+    { to: "services", label: "Services", offset: -80 },
+    { to: "experience", label: "Experience", offset: -80 },
+    { to: "blog", label: "Projects", offset: -80 },
+    { to: "Contact", label: "Contact", offset: -80 },
   ];
 
   return (
@@ -39,6 +39,7 @@ export default function Navbar() {
                   smooth={true}
                   duration={500}
                   offset={link.offset}
+                  isDynamic={true}
                   activeClass="text-red-600 font-semibold border-b-2 border-red-600"
                   className="cursor-pointer pb-1"
                 >
@@ -72,6 +73,7 @@ export default function Navbar() {
                 smooth={true}
                 duration={500}
                 offset={link.offset}
+                isDynamic={true}
                 onClick={() => setIsOpen(false)} 
                 activeClass="text-red-600 font-semibold"
                 className="cursor-pointer"
@@ -82,6 +84,7 @@ export default function Navbar() {
           ))}
         </ul>
       </div>
+
 
       {/* Dark Overlay when Sidebar is open */}
       {isOpen && isMobile && (
