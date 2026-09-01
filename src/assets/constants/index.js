@@ -35,12 +35,27 @@ export const servicesData = [
 
 export const PROJECTS = [
   {
-    title: "StudyNotion",
+    title: "UpSkill",
     image: project1,
-    link:"https://studynotion-ad.vercel.app/",
+    link: "https://upskill-ad.vercel.app/",
     description:
-      "Ed-Tech platform built using the MERN stack. This application empowers instructors to create and sell course while providing students with a seamless platform to purchase and consume educational content. It features a secure, role-based architecture with JWT authentication, and integrated Cloudinary for optimizedmedia management and Razorpay for secure payment gateways, ensuring 99.9% transaction reliability.",
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "JWT", "Cloudinary", "Razorpay", "REST APIs"],
+      "Ed-Tech platform built using the MERN stack. This application empowers instructors to create and sell courses, while providing students with a seamless platform to purchase and consume educational content. It features a secure, role-based architecture with JWT authentication, and integrated Cloudinary for optimized media management and Razorpay for secure payment gateways, ensuring 99.9% transaction reliability.",
+    technologies: [
+      "React.js", 
+      "Node.js", 
+      "Express.js", 
+      "MongoDB", 
+      "Tailwind CSS", 
+      "JWT", 
+      "Cloudinary", 
+      "Razorpay", 
+      "REST APIs",
+      "Docker",
+      "Kubernetes",
+      "Jenkins",
+      "Prometheus",
+      "Grafana"
+    ],
   },
   {
     title: "Care Connect",
